@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PipChi Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+    <!-- Barre de progression de défilement -->
+    <div id="progressBar"></div>
+
+    <!-- Header avec l'image de fond et message de bienvenue -->
+    <header class="header-background">
+        <div class="header-content">
+            <h1 class="welcome-message">Bienvenue chez PipChi Boutique</h1>
+            <p class="intro-text">Découvrez des articles uniques avec un style authentique !</p>
+        </div>
+    </header>
+
+    <!-- Popup de capture d’e-mails avec le bouton (X) sur la fenêtre elle-même -->
+    <div class="popup" id="emailPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="closePopup">×</button>
+            <h2>Inscrivez-vous à notre Newsletter</h2>
+            <p>Recevez 5% de réduction sur votre prochain achat !</p>
+            <form action="https://formspree.io/f/mqakzbye" method="POST">
+                <input type="email" name="email" placeholder="Entrez votre email" required>
+                <button type="submit" class="btn">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Section Promotion -->
+    <section class="promo">
+        <h2>Offre Spéciale</h2>
+        <p>Bénéficiez de -2% avec le code promo <strong>PIPCHI</strong> sur OUMISTORE.</p>
+        <a href="https://oumistore.com/?page=boutique&boutiqueId=4518" class="btn special-offer-btn">Utilisez le code PIPCHI</a>
+    </section>
+
+    <!-- Section Articles -->
+    <section class="articles">
+        <h2>Nos Articles</h2>
+        <div class="article-list">
+            <!-- Article 1 -->
+            <div class="article-item">
+                <img src="product1.jpg" alt="Montre et Bracelets">
+                <h3>Montre et Bracelets</h3>
+                <p>Un ensemble de montre de luxe et de bracelets élégants, parfaits pour toute occasion.</p>
+                <a href="https://oumistore.com/?page=boutique&boutiqueId=4518" class="btn article-btn">Voir Détails</a>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article-item">
+                <img src="product2.jpg" alt="Sac à dos classique">
+                <h3>Sac à dos classique</h3>
+                <p>Un sac à dos robuste et élégant, idéal pour vos déplacements quotidiens.</p>
+                <a href="https://oumistore.com/?page=boutique&boutiqueId=4518" class="btn article-btn">Voir Détails</a>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="article-item">
+                <img src="product3.jpg" alt="Bracelets élégants">
+                <h3>Bracelets élégants</h3>
+                <p>Un ensemble de bracelets tendance, parfait pour compléter votre look décontracté.</p>
+                <a href="https://oumistore.com/?page=boutique&boutiqueId=4518" class="btn article-btn">Voir Détails</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de Contact -->
+    <section class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm" action="https://formspree.io/f/mqakzbye" method="POST">
+            <div class="form-group">
+                <label for="name">Votre nom:</label>
+                <input type="text" id="name" name="name" required placeholder="Entrez votre nom">
+                <small class="error" id="nameError">Le nom est requis</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Votre email:</label>
+                <input type="email" id="email" name="email" required placeholder="Entrez votre email">
+                <small class="error" id="emailError">Email invalide</small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Votre message:</label>
+                <textarea id="message" name="message" required placeholder="Entrez votre message"></textarea>
+                <small class="error" id="messageError">Le message est requis</small>
+            </div>
+
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Section du QR Code -->
+    <section class="qr-code">
+        <h2>Scannez pour accéder à la boutique</h2>
+        <img src="qr-code.png" alt="QR code pour la boutique PipChi">
+    </section>
+
+    <!-- Footer avec logos dans un rectangle style carte de crédit et texte Suivez-nous -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-card">
+                <p>Suivez-nous :</p>
+                <ul class="social-media">
+                    <li>
+                        <a href="https://www.instagram.com/pipchi2024" target="_blank">
+                            <img src="imagesinstagram-logo.png" alt="Instagram" class="social-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://oumistore.com/?page=boutique&boutiqueId=4518" target="_blank">
+                            <img src="imagesoumistore-logo.png" alt="OUMISTORE" class="social-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>&copy; 2024 PipChi Boutique | Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button avec plus de contraste et une flèche plus visible -->
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
